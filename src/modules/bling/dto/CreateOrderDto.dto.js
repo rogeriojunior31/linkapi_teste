@@ -1,7 +1,7 @@
-const jsontoxml = require("jsontoxml");
+const jsontoxml = require('jsontoxml');
 
-class CreateOrderDto{
-  transform(data){
+class CreateOrderDto {
+  transform(data) {
     let order = {
       pedido: [
         {
@@ -91,10 +91,10 @@ class CreateOrderDto{
           ],
         },
       ],
-    }
+    };
     order = jsontoxml(order);
     return order;
 
   }
-};
+}
 module.exports = new CreateOrderDto();
